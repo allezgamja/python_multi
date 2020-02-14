@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+<!-- style 설명:
+     1) div의 span 태그 글자색을 red로
+	 2) div의 class="bot"인 글자색을 green으로 -->
+<style type="text/css">
+   div span{
+       color:red;
+	   }
+   div[class="bot"]{
+       color:green;
+	   }
+   .usr{
+       text-align:right;
+   }
+   .bot{
+       text-align:left;
+   }
+
+   span{
+        background-color:#ff9966;
+		width:200px;
+		overflow: hidden;
+		}
+</style>
+
+ </head>
+ <body>
+  <h1>대화창</h1>
+    <div class="usr">
+	    <span>Hi hello</span>
+	</div>
+
+	<div class="bot">
+	    <span>Hi i'm a bot</span>
+	</div>
+ </body>
+</html>

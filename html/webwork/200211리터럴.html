@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+<script>
+	var j = 10	//숫자열 리터럴: 보이는 숫자 자체를 받음
+	var k = 'Hello'	//문자열 리터럴: 보이는 문자를 그대로 받음
+	var i = j // 리터럴이 아님
+	//함수리터럴,객체리터럴
+	var show = function(name){  	//익명함수(이름이 없다)
+		window.alert('show function');
+	};
+	//document.write(show); 이때까지만 해도 일반 문자열이다. 함수지만 실행가능한 함수로 보는 게 아니라 한 대입연산자의 값으로 본다.
+	//show(name='홍길동'); name 지정해서 전달할 수 있다. 이때부턴 실행이 된다.
+	
+	//선언적함수(이름이 있다)
+	function display(args){
+		//document.write(args);
+		args();  //함수리터럴() ---> 진짜 함수가 된다.
+	}
+	//실행하고자 하는 코드를 인수로 받아서 실행. 코드를 선별해서 실행할 수 있다. 보안 상으로는 위험...
+	//window.display(show);   // 1차원적인 코드라 ok. 거쳐서 거쳐서 하는 모델은 권한이 없다고 나온다. 직접호출만 인정.
+
+	//function dp(function(){}){}  //인수에 function 리터럴 넣을 수 있다.
+ 
+	function dp2(){
+		return (function(){;})
+	}
+
+	//배열리터럴: 인덱스 접근법 arr[0]
+	var arr=[1,2.5,'hello',function(){},[4,5,6]];
+
+	//객체리터럴: 데이터 여러개, 함수 여러개 -> key값으로 접근. function도 value다
+	var obj={
+		name: '홍길동',   
+		age:30,
+		display:function(){
+			document.write(this.name);  //outer변수가 아닌 instance변수를 찾기 위해서 this 붙인다. 			
+		},
+		moveup:function(){	
+		}
+		
+	};
+
+	//document.write(obj.name) 객체지향에서 속성은 가려야 하므로 name을 바로 호출하지 말아라.
+    obj.display()
+
+
+
+</script>
+
+
+ </head>
+ <body>
+  
+ </body>
+</html>

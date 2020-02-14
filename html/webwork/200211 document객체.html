@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+     <script>
+      //선언부
+	  function display(name, city){
+		document.write("<h1>이름:"+name+"<h1>");
+		//document객체: 웹 페이지 그 자체.
+		//javascript에서는 웹페이지의 html요소에 접근하고자 할 때 반드시 document객체부터 시작
+	  }
+	  function display(){
+		for(arg in arguments){
+			window.document.write("arg:"+arg);   //window는 생략가능
+		}
+		}
+	  function myfunc(){
+			//inner function
+		   function display(){}}   //javascript는 위에서부터 아래로 전체를 쭉 읽는다. 똑같은 함수 이름이 있다면 가장 마지막에 선언된 함수를 읽음. 
+
+		//호출부
+		display("홍길동", "서울시", 24);
+	 </script>
+ </head>
+ <body>
+  
+ </body>
+</html>
